@@ -13,8 +13,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class StudentController {
 
-    @Autowired
-    private StudentService service;
+        private final StudentService service;
 
     @PostMapping(value = "upload", consumes = {"multipart/form-data"})
     public ResponseEntity<Integer> upload(@RequestPart("file")MultipartFile file) throws IOException {
